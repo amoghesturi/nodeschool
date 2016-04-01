@@ -1,0 +1,89 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Dev\\NodeJs\\node.exe',
+1 verbose cli   'C:\\Dev\\NodeJs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.3.12
+3 info using node@v5.1.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\Users\\Developer\\Documents\\nodeschool\\how-to-npm',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\Developer\AppData\Roaming\npm-cache\@amoghesturi\how-to-npm\1.0.0\package.tgz not in flight; packing
+9 info lifecycle @amoghesturi/how-to-npm@1.0.0~prepublish: @amoghesturi/how-to-npm@1.0.0
+10 silly lifecycle @amoghesturi/how-to-npm@1.0.0~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ 'C:\\Users\\Developer\\AppData\\Roaming\\npm-cache\\@amoghesturi\\how-to-npm\\1.0.0\\package.tgz',
+11 verbose tar pack   'C:\\Users\\Developer\\Documents\\nodeschool\\how-to-npm' ]
+12 verbose tarball C:\Users\Developer\AppData\Roaming\npm-cache\@amoghesturi\how-to-npm\1.0.0\package.tgz
+13 verbose folder C:\Users\Developer\Documents\nodeschool\how-to-npm
+14 verbose addLocalTarball adding from inside cache C:\Users\Developer\AppData\Roaming\npm-cache\@amoghesturi\how-to-npm\1.0.0\package.tgz
+15 silly cache afterAdd @amoghesturi/how-to-npm@1.0.0
+16 verbose afterAdd C:\Users\Developer\AppData\Roaming\npm-cache\@amoghesturi\how-to-npm\1.0.0\package\package.json not in flight; writing
+17 verbose afterAdd C:\Users\Developer\AppData\Roaming\npm-cache\@amoghesturi\how-to-npm\1.0.0\package\package.json written
+18 silly publish { name: '@amoghesturi/how-to-npm',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: 'How-to-npm tutorial',
+18 silly publish   repository: { type: 'git', url: 'Readme.md' },
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'node test.js' },
+18 silly publish   keywords: [ 'tutorial' ],
+18 silly publish   author: { name: 'amoghesturi' },
+18 silly publish   license: 'ISC',
+18 silly publish   dependencies: { '@linclark/pkg': '^1.0.2' },
+18 silly publish   readme: 'This is a test Readme file to be used with how-to-npm tutorial\r\n',
+18 silly publish   readmeFilename: 'Readme.md',
+18 silly publish   _id: '@amoghesturi/how-to-npm@1.0.0',
+18 silly publish   _shasum: '46b77de38c939c00dbf0eaca0ad2b444a8af352c',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name @amoghesturi/how-to-npm
+21 silly mapToRegistry scope (from package name) @amoghesturi
+22 verbose mapToRegistry no registry URL found in name for scope @amoghesturi
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry http://localhost:15443/
+25 silly mapToRegistry uri http://localhost:15443/@amoghesturi%2fhow-to-npm
+26 verbose publish registryBase http://localhost:15443/
+27 silly publish uploading C:\Users\Developer\AppData\Roaming\npm-cache\@amoghesturi\how-to-npm\1.0.0\package.tgz
+28 verbose request uri http://localhost:15443/@amoghesturi%2fhow-to-npm
+29 verbose request sending authorization for write operation
+30 info attempt registry request try #1 at 6:39:14 PM
+31 verbose request id c6508cfc35b4e4c6
+32 http request PUT http://localhost:15443/@amoghesturi%2fhow-to-npm
+33 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:15443
+34 info attempt registry request try #2 at 6:39:25 PM
+35 http request PUT http://localhost:15443/@amoghesturi%2fhow-to-npm
+36 info retry will retry, error on last attempt: Error: connect ECONNREFUSED 127.0.0.1:15443
+37 info attempt registry request try #3 at 6:40:26 PM
+38 http request PUT http://localhost:15443/@amoghesturi%2fhow-to-npm
+39 verbose request invalidating C:\Users\Developer\AppData\Roaming\npm-cache\localhost_15443\_40amoghesturi_252fhow-to-npm on PUT
+40 error publish Failed PUT undefined
+41 verbose stack Error: connect ECONNREFUSED 127.0.0.1:15443
+41 verbose stack     at Object.exports._errnoException (util.js:856:11)
+41 verbose stack     at exports._exceptionWithHostPort (util.js:879:20)
+41 verbose stack     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+42 verbose cwd C:\Users\Developer\Documents\nodeschool\how-to-npm
+43 error Windows_NT 6.1.7601
+44 error argv "C:\\Dev\\NodeJs\\node.exe" "C:\\Dev\\NodeJs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+45 error node v5.1.1
+46 error npm  v3.3.12
+47 error code ECONNREFUSED
+48 error errno ECONNREFUSED
+49 error syscall connect
+50 error Error: connect ECONNREFUSED 127.0.0.1:15443
+50 error     at Object.exports._errnoException (util.js:856:11)
+50 error     at exports._exceptionWithHostPort (util.js:879:20)
+50 error     at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1063:14)
+50 error  { [Error: connect ECONNREFUSED 127.0.0.1:15443]
+50 error   code: 'ECONNREFUSED',
+50 error   errno: 'ECONNREFUSED',
+50 error   syscall: 'connect',
+50 error   address: '127.0.0.1',
+50 error   port: 15443 }
+51 error If you are behind a proxy, please make sure that the
+51 error 'proxy' config is set properly.  See: 'npm help config'
+52 verbose exit [ 1, true ]
