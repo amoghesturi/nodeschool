@@ -1,0 +1,14 @@
+{
+  "name": "event_emitter_example",
+  "version": "1.0.0",
+  "description": "Example for event emitter from the node js documentation",
+  "main": "",
+  "scripts": {
+    "test": "''"
+  },
+  "keywords": [
+    "EventEmitter"
+  ],
+  "author": "amogh",
+  "license": "ISC"
+}

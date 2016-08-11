@@ -1,0 +1,31 @@
+{
+  "name": "prod.veev",
+  "version": "1.0.0",
+  "description": "Middleware for VeeV app",
+  "main": "EndPoints.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node WebService\\EndPoints.js | node_modules\\.bin\\bunyan"
+  },
+  "author": "amoghesturi, yashg",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "^1.13.2",
+    "bunyan": "^1.4.0",
+    "ejs": "^2.0.0",
+    "express": "^4.13.1",
+    "file-type": "^2.10.2",
+    "ip": "^0.3.3",
+    "mathjs": "^2.0.1",
+    "multiparty": "^4.1.2",
+    "nodemailer": "^1.4.0",
+    "nodemailer-smtp-transport": "^1.0.3",
+    "path": "^0.11.14",
+    "pg": "^4.4.0",
+    "promise": "^7.1.1",
+    "read-chunk": "^1.0.1",
+    "request": "^2.58.0",
+    "validator": "^3.43.0"
+  }
+}

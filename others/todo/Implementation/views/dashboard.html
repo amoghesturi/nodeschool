@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Admin Dashboard</title>
+      <link href="http://www.vimsel.com/wp-content/uploads/2015/10/Preloader-250.png">
+
+      <style type="text/css">
+         /* Client-specific Styles */
+         div, p, a, li, td { -webkit-text-size-adjust:none; }
+         #outlook a {padding:0;} /* Force Outlook to provide a "view in browser" menu link. */
+         html{width: 100%; }
+         body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+         /* Prevent Webkit and Windows Mobile platforms from changing default font sizes, while not breaking desktop design. */
+         .ExternalClass {width:100%;} /* Force Hotmail to display emails at full width */
+         .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;} /* Force Hotmail to display normal line spacing. */
+         #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+         img {outline:none; text-decoration:none;border:none; -ms-interpolation-mode: bicubic;}
+         a img {border:none;}
+         .image_fix {display:block;}
+         p {margin: 0px 0px !important;}
+         table td {border-collapse: collapse;}
+         table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+         a {color: #33b9ff;text-decoration: none;text-decoration:none!important;}
+         /*STYLES*/
+         table[class=full] { width: 100%; clear: both; }
+         /*IPAD STYLES*/
+         @media only screen and (max-width: 640px) {
+         a[href^="tel"], a[href^="sms"] {
+         text-decoration: none;
+         color: #33b9ff; /* or whatever your want */
+         pointer-events: none;
+         cursor: default;
+         }
+         .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+         text-decoration: default;
+         color: #33b9ff !important;
+         pointer-events: auto;
+         cursor: default;
+         }
+         table[class=devicewidth] {width: 440px!important;text-align:center!important;}
+         table[class=devicewidthinner] {width: 420px!important;text-align:center!important;}
+         img[class=banner] {width: 440px!important;height:220px!important;}
+         img[class=col2img] {width: 440px!important;height:220px!important;}
+
+         }
+         /*IPHONE STYLES*/
+         @media only screen and (max-width: 480px) {
+         a[href^="tel"], a[href^="sms"] {
+         text-decoration: none;
+         color: #33b9ff; /* or whatever your want */
+         pointer-events: none;
+         cursor: default;
+         }
+         .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+         text-decoration: default;
+         color: #33b9ff !important;
+         pointer-events: auto;
+         cursor: default;
+         }
+         table[class=devicewidth] {width: 280px!important;text-align:center!important;}
+         table[class=devicewidthinner] {width: 260px!important;text-align:center!important;}
+         img[class=banner] {width: 280px!important;height:140px!important;}
+         img[class=col2img] {width: 280px!important;height:140px!important;}
+
+         }
+      </style>
+      <script>
+      function getTotalUserDetails() {
+        post('/showDetails?pageTitle=ALL%20USERS');
+      }
+      function getPendingUserDetails() {
+        post('/showDetails?pageTitle=PENDING%20USERS');
+      }
+
+      function post(path, params) {
+        var form = document.createElement("form");
+        form.setAttribute("method", 'post');
+        form.setAttribute("action", path);
+
+        var hiddenField = document.createElement("input");
+        hiddenField.setAttribute('type', 'hidden');
+        hiddenField.setAttribute('name', 'details');
+        hiddenField.setAttribute('value', params);
+
+        form.appendChild(hiddenField);
+        document.body.appendChild(form);
+        form.submit();
+      }
+    </script>
+   </head>
+   <body>
+
+<!-- Start of seperator -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="seperator">
+   <tbody>
+      <tr>
+         <td>
+            <table width="600" align="center" cellspacing="0" cellpadding="0" border="0" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td align="center" height="30" style="font-size:1px; line-height:1px;">&nbsp;</td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of seperator -->
+
+<!-- Start of content -->
+<table width="100%" bgcolor="#fcfcfc" cellpadding="0" cellspacing="0" border="0" id="backgroundTable" st-sortable="left-image">
+   <tbody>
+      <tr>
+         <td>
+            <table width="1000" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+               <tbody>
+                  <tr>
+                     <td width="100%">
+                       <!-- This table contains the whole content -->
+                        <table width="1000" cellpadding="0" cellspacing="0" border="0" align="center" class="devicewidth">
+                          <!-- spacing for mobile devices-->
+                          <table align="left" border="0" cellpadding="0" cellspacing="0" class="mobilespacing">
+                            <tbody>
+                              <tr>
+                                <td width="100%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">&nbsp;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- end of for mobile devices-->
+
+                          <!-- start of right column -->
+                          <table  width="100%" align="center" border="0" cellpadding="0" cellspacing="0" class="devicewidth">
+                            <tbody>
+                              <!-- Row 1 contains logo -->
+                              <tr>
+                                <td align="center">
+                                  <img src="http://www.vimsel.com/wp-content/uploads/2015/10/Preloader-250.png" align="middle" alt="VeeV Logo" height="100" width="100">
+                                </td>
+                              </tr>
+                              <!-- Row 2 - Green Ribbon on the Top --->
+                              <tr height="15" bgcolor="#15A182" align="center" border="0" st-button="learnmore">
+                                <td colspan="2">
+                                </td>
+                              </tr>
+                              <!-- Spacing -->
+                              <tr>
+                                <td width="95%" height="15" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                              <!-- title -->
+                              <tr>
+                                <td width="25%" style="font-family: Helvetica, arial, sans-serif; font-size: 18px; color: #111111; text-align:left; line-height: 24px;">
+                                  DASHBOARD
+                                </td>
+                                <td width="25%">
+                                  <a href="javascript:history.go(0)">Refresh</a>
+                                </td>
+                              </tr>
+                              <!-- end of title -->
+                              <!-- Spacing -->
+                              <tr>
+                                <td width="100%" height="7" style="font-size:1px; line-height:1px; mso-line-height-rule: exactly;">
+                                  &nbsp;
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                            <!-- Table with borders displayed -->
+                            <table width="100%" border="1">
+                              <tr>
+                                <td>
+                                  USERS
+                                </td>
+                                <td>
+                                  Total # of users
+                                </td>
+                                <td>
+                                  <%=count_total_users%>
+                                </td>
+                                <td>
+                                  <a id="count_total_users_link" href="javascript:void(0);" onclick="getTotalUserDetails()">Details</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                </td>
+                                <td>
+                                  Pending users
+                                </td>
+                                <td>
+                                  <%=count_pending_users%>
+                                </td>
+                                <td>
+                                  <a id="count_pending_users_link" href="javascript:void(0);" onclick="getPendingUserDetails()">Details</a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  Apparel
+                                </td>
+                                <td>
+                                  Total # of apparel
+                                </td>
+                                <td>
+                                  <%=count_apparel%>
+                                </td>
+                                <td>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <!-- End of table with borders -->
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<!-- End of content -->
+
+   </body>
+   </html>

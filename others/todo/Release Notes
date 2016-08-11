@@ -1,0 +1,37 @@
+--------------------------------------------------------------------------------
+WEB SERVICE RELEASE NOTES
+--------------------------------------------------------------------------------
+
+Version 0.87
+--------------------------------------------------------------------------------
+1. End points to restore user data
+2. Bug fix - Deleting an image should delete associated events in the database
+3. All the strings received by the web service will be converted to lower case
+   before processing
+4. Upload image to offline cache was reverted back so that the images can be seen
+   in the moodstock's desktop uploader
+5. Code clean up
+    -- views folders were consolidated
+    -- json with technical errors were changed
+6. Commented out database tables and columns
+7. removed deprecated database tables
+   -- waitlist
+   -- invitees       
+   
+Version 1.0.0
+--------------------------------------------------------------------------------
+1. Web services to support new features
+   - Event History
+   - Get apparel details
+   - Add multiple images to the events
+2. All the dates are stored in the database as time stamps and not as strings
+   - Changes in the queries supporting changes in format.
+   - Changes in the code supporting changes in the format
+3. Support for donations
+   - New columns showing the date and place donations are made.
+4. Supports 'Forced Delete' of images.
+5. Bug Fixes
+   - Disabled log rotate in bunyan to fix multiple server restarts.
+   - Moved all the view files into one folder
+   - Deleted unused files
+   - Errors during registration process are fixed.   
